@@ -10,15 +10,13 @@
     "start": "node server.js"
   },
   "dependencies": {
-    "express": "^4.17.1",
-    "telegraf": "^3.38.0",
-    "nodejieba": "^2.4.1"
+    "express": "^4.16.4"
   },
   "engines": {
     "node": "8.x"
   },
   "repository": {
-    "url": ""
+    "url": "https://glitch.com/edit/#!/hello-express"
   },
   "license": "MIT",
   "keywords": [
