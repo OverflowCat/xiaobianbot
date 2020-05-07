@@ -15,8 +15,8 @@ bot.on("text", ctx => {
   const q = ctx.inlineQuery.query;
   var results = [];
   var thing = q;
-  var t1 = de(q)[0];
-  var t2 = de(q)[-1];
+  var t1 = (q)[0];
+  var t2 = (q)[-1];
   if (t2) {
     t2 = "的" + t2;
   } else {
