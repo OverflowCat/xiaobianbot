@@ -35,5 +35,11 @@ function de(t){
 }
 const { Telegraf } = require('telegraf')
 
-const bot = new Telegraf(process.env.xnbm)
+const bot = new Telegraf(process.env.XNBM)
+
+//inline
+bot.on("inline_query", async ({ inlineQuery, answerInlineQuery }) => {
+  const q = inlineQuery.query;
+  var results = [];
+})
 
