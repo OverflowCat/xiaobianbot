@@ -1,42 +1,17 @@
-// server.js
-// where your node app starts
-
-// init project
-const express = require("express");
-const app = express();
-const http = require("http");
-// we've started you off with Express,
-// but feel free to use whatever libs or frameworks you'd like through `package.json`.
-
-// http://expressjs.com/en/starter/static-files.html
-app.use(express.static("public"));
-
-// http://expressjs.com/en/starter/basic-routing.html
-app.get("/", function(request, response) {
-  app.get("/", (request, response) => {
-    console.log(Date.now() + " Ping Received");
-    response.sendStatus(200);
-  });
-});
-
-// listen for requests :)
-const listener = app.listen(process.env.PORT, function() {
-  console.log("Your app is listening on port " + process.env.PORT);
-});
-setInterval(() => {
-  http.get(`http://${process.env.PROJECT_DOMAIN}.glitch.me/`);
-}, 28000);
-
 const jieba = require("nodejieba");
 function de(t) {
   return jieba.cut(t);
 }
-const { Telegraf } = require("telegraf");
+const Telegraf = require("telegraf");
 
 const bot = new Telegraf(process.env.XNBM);
 console.log("ss");
-bot.on("inline_query", ctx => {
-  console.log(q);
+bot.start(ctx => ctx.reply("Welcome!"));
+bot.help(ctx => ctx.reply("Send me a sticker"));
+bot.on("sticker", ctx => ctx.reply("👍"));
+bot.hears("hi", ctx => ctx.reply("Hey there"));
+bot.on("text", ctx => {
+  console.log(ctx);
   const q = ctx.inlineQuery.query;
   var results = [];
   var thing = q;
@@ -61,13 +36,12 @@ bot.on("inline_query", ctx => {
       description: res,
       input_message_content: {
         message_text: res
-      },
-      thumb_url:
-        "https://cdn.glitch.com/e41d8351-01f6-4af8-b0ee-bd4710cb3769%2F5BF7709A-BD2D-47DA-9C00-48A22E619F73.jpeg?v=1569941377839"
+      }
+      // thumb_url:
     }
   ];
   //Telegram requests results even if the query is blank when the user typed and deleted
 
   console.log(JSON.stringify(results));
- ctx.telegram.answerInlineQuery(results);
+  ctx.telegram.answerInlineQuery(results);
 });
