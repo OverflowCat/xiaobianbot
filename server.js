@@ -28,3 +28,12 @@ const listener = app.listen(process.env.PORT, function() {
 setInterval(() => {
   http.get(`http://${process.env.PROJECT_DOMAIN}.glitch.me/`);
 }, 280000);
+
+const jieba = require("nodejieba")
+function de(t){
+  return jieba.cut(t);
+}
+const { Telegraf } = require('telegraf')
+
+const bot = new Telegraf(process.env.xnbm)
+
