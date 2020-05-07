@@ -22,13 +22,19 @@ bot.on("sticker", ctx => ctx.reply("👍"));
 bot.hears("hi", ctx => ctx.reply("Hey there"));
 //bot.on("inline_query", ctx => {
 bot.on("inline_query", async ({ inlineQuery, answerInlineQuery }) => {
-  const q = inlineQuery.query;
+  var q = inlineQuery.query;
   //const q = ctx.inlineQuery.query;
   var results = [];
-  if(!q) q = "鱼挨打";
+  if (q == "") q = "鱼挨打";
   var thing = q;
-  var t1 = de(q)[0];
-  var t2 = de(q)[1];
+  var des = de(q);
+  var t1 = des[0];
+  var t2 = des[des.length - 1];
+  if (thing.indexOf(" ") >= 1) {
+    var ts = thing.split(" ");
+    t1 = ts[0];
+    t2 = ts[1];
+  }
   if (t2) {
     //t2 = "的" + t2;
   } else {
@@ -42,7 +48,9 @@ bot.on("inline_query", async ({ inlineQuery, answerInlineQuery }) => {
     .split("鱼怎么")
     .join(t1 + "怎么")
     .split("会挨打呢")
-    .join("会" + t2 + "呢");
+    .join("会" + t2 + "呢")
+    .split("undefined")
+    .join("");
 
   if (res === "") return;
   results = [
