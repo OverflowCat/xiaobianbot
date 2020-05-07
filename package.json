@@ -10,7 +10,9 @@
     "start": "node server.js"
   },
   "dependencies": {
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "nodejieba": "^2.4.1",
+    "telegraf": "^3.38.0"
   },
   "engines": {
     "node": "8.x"
