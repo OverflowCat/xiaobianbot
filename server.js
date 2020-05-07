@@ -5,7 +5,6 @@
 const express = require("express");
 const app = express();
 const http = require("http");
-
 // we've started you off with Express,
 // but feel free to use whatever libs or frameworks you'd like through `package.json`.
 
@@ -26,7 +25,7 @@ const listener = app.listen(process.env.PORT, function() {
 });
 setInterval(() => {
   http.get(`http://${process.env.PROJECT_DOMAIN}.glitch.me/`);
-}, 280000);
+}, 28000);
 
 const jieba = require("nodejieba");
 function de(t) {
@@ -35,10 +34,10 @@ function de(t) {
 const { Telegraf } = require("telegraf");
 
 const bot = new Telegraf(process.env.XNBM);
-
-//inline
-bot.on("inline_query", async ({ inlineQuery, answerInlineQuery }) => {
-  const q = inlineQuery.query;
+console.log("ss");
+bot.on("inline_query", ctx => {
+  console.log(q);
+  const q = ctx.inlineQuery.query;
   var results = [];
   var thing = q;
   var t1 = de(q)[0];
@@ -70,5 +69,5 @@ bot.on("inline_query", async ({ inlineQuery, answerInlineQuery }) => {
   //Telegram requests results even if the query is blank when the user typed and deleted
 
   console.log(JSON.stringify(results));
-  return answerInlineQuery(results);
+ ctx.telegram.answerInlineQuery(results);
 });
