@@ -1,34 +1,5 @@
-Keep Your Glitch Project Always Online
-=================
+# 小编 bot
 
-## Just wait for a few secs
-> Glitch automatically saves the file, quite literally, on every keypress you make. And restarts it. This is not only slightly visually annoying, but also damaging to bots.
-
-## I ping me myself
-> Glitch is made to be a web hosting really, and will "sleep" after 5 minutes if it receives no HTTP request. However, there is a very convenient way to keep it alive, which is actually provided by the app itself - the express.js module is pre-installed, and all you need to do is to "ping" it every 5 minutes to make sure it doesn't sleep.
-
-
-Click `Show` in the header to see your app live. Updates to your code will instantly deploy and update live.
-
-**Glitch** is the friendly community where you'll build the app of your dreams. Glitch lets you instantly create, remix, edit, and host an app, bot or site, and you can invite collaborators or helpers to simultaneously edit code with you.
-
-Find out more [about Glitch](https://glitch.com/about).
-
-
-Your Project
-------------
-
-On the front-end,
-- edit `public/client.js`, `public/style.css` and `views/index.html`
-- drag in `assets`, like images or music, to add them to your project
-
-On the back-end,
-- your app starts at `server.js`
-- add frameworks and packages in `package.json`
-- safely store app secrets in `.env` (nobody can see this but you and people you invite)
-
-
-Made by [Glitch](https://glitch.com/)
--------------------
-
-\ ゜o゜)ノ
+![scr](https://cdn.glitch.com/9e6252a1-0acf-4277-bc69-06419815d108%2FIMG_20200508_233315.jpg?v=1588952025901)
+[@xiaobianbot](https://t.me/xiaobianbot)
+> めぐみ是什么意思？めぐみ是什么梗？めぐみ是谁？这个梗又是从何而来？为什么一瞬间就有好多人めぐみ？为什么大家都在めぐみ？相信很多同学都很想知道这个梗，下面就让小编来为大家介绍一下めぐみ梗的详细内容。めぐみ，其实就是梅谷米，大家可能会很惊讶めぐ怎么会み呢？但事实就是这样，小编也感到非常惊讶。以上就是めぐみ的的全部内容，希望能够帮助到大家。
