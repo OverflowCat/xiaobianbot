@@ -34,6 +34,8 @@ bot.on("inline_query", async ({ inlineQuery, answerInlineQuery }) => {
     var ts = thing.split(" ");
     t1 = ts[0];
     t2 = ts[1];
+    if (ts[2]) var t3 = ts[2];
+    thing = t1 + t2;
   }
   if (t2) {
     //t2 = "的" + t2;
@@ -44,7 +46,7 @@ bot.on("inline_query", async ({ inlineQuery, answerInlineQuery }) => {
     .split("鱼挨打")
     .join(thing)
     .split("鱼的挨打")
-    .join(t1 + "的" + t2)
+    .join(!t3 ? t1 + "的" + t2 : t3)
     .split("鱼怎么")
     .join(t1 + "怎么")
     .split("会挨打呢")
