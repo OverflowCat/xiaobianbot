@@ -25,7 +25,7 @@ bot.on("inline_query", async ({ inlineQuery, answerInlineQuery }) => {
   var q = inlineQuery.query;
   //const q = ctx.inlineQuery.query;
   var results = [];
-  if (q == "") q = "鱼挨打";
+  if (q == "") q = "小 编 屎";
   var thing = q;
   var des = de(q);
   var t1 = des[0];
@@ -42,17 +42,23 @@ bot.on("inline_query", async ({ inlineQuery, answerInlineQuery }) => {
   } else {
     t2 = "";
   }
-  var res = "鱼挨打是什么意思？鱼挨打是什么梗？鱼挨打是谁？这个梗又是从何而来？为什么一瞬间就有好多人鱼挨打？为什么大家都在鱼挨打？相信很多同学都很想知道这个梗，下面就让小编来为大家介绍一下鱼挨打梗的详细内容。鱼挨打，其实就是鱼的挨打，大家可能会很惊讶鱼怎么会挨打呢？但事实就是这样，小编也感到非常惊讶。以上就是鱼挨打的的全部内容，希望能够帮助到大家。"
-    .split("鱼挨打")
-    .join(thing)
-    .split("鱼的挨打")
-    .join(!t3 ? t1 + "的" + t2 : t3)
-    .split("鱼怎么")
-    .join(t1 + "怎么")
-    .split("会挨打呢")
-    .join("会" + t2 + "呢")
-    .split("undefined")
-    .join("");
+  var res =
+    "鱼挨打是什么意思？鱼挨打是什么梗？鱼挨打是谁？这个梗又是从何而来？" +
+    "为什么一瞬间就有好多人鱼挨打？为什么大家都在鱼挨打？" +
+    "相信很多同学都很想知道这个梗，下面就让小编来为大" +
+    "家介绍一下鱼挨打梗的详细内容。鱼挨打，其实就是鱼" +
+    "的挨打，大家可能会很惊讶鱼怎么会挨打呢？但事实就是这样，" +
+    "小编也感到非常惊讶。以上就是鱼挨打的全部内容，希望能够帮助到大家。"
+      .split("鱼挨打")
+      .join(thing)
+      .split("鱼的挨打")
+      .join(!t3 ? t1 + "的" + t2 : t3)
+      .split("鱼怎么")
+      .join(t1 + "怎么")
+      .split("会挨打呢")
+      .join("会" + t2 + "呢")
+      .split("undefined")
+      .join("");
 
   if (res === "") return;
   results = [
